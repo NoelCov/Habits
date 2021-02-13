@@ -1,0 +1,123 @@
+body {
+  width: 100vw;
+  height: 100%;
+  background: #50a3a2;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 200;
+  color: black;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 40px;
+  padding-top: 10%;
+  color: black;
+}
+
+/* Button container */
+.btn {
+  display: inline-block;
+  margin: 5px;
+}
+
+/* Simple Container for most components */
+.container {
+  display: relative;
+  margin: 10% auto 0 auto;
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* Form Stuff */
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.form-btn {
+  display: inline-block;
+  margin: 5px;
+}
+
+.form-btn-submit {
+  padding-top: 2px;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #222831;
+  padding-top: 3px;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-list {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.footer-element {
+  padding: 2px;
+  display: inline-block;
+  margin: 0 10rem 6px 10rem;
+}
+
+/* Calendar component */
+.calendar-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin: 5% auto;
+}
+
+.calendar-icon {
+  color: white;
+}
+
+
+/* Item component */
+.habit-element {
+  font-size: 25px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: black;
+  display: inline-block;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 1px;
+}
+
+
+/* HabitContainer Component */
+.list-group {
+  position: relative;
+  margin-top: 10px;
+}
+
+/* GetStarted Component */
+.getStarted-container {
+  position: relative;
+  margin: 5% auto 0 auto;
+  text-align: center;
+  padding: 20px 20% 3%;
+}
+
+.quote {
+  font-size: 25px;
+  margin-top: 5%;
+}
