@@ -1,8 +1,7 @@
 body {
-  width: 100vw;
-  height: 100%;
   background: #50a3a2;
   font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
 }
 
 .title {
@@ -19,15 +18,10 @@ h1 {
 
 h2 {
   font-size: 40px;
-  padding-top: 10%;
+  padding-top: 5%;
   color: black;
 }
 
-/* Button container */
-.btn {
-  display: inline-block;
-  margin: 5px;
-}
 
 /* Simple Container for most components */
 .container {
@@ -37,7 +31,13 @@ h2 {
   padding: 60px 0;
 }
 
-/* Form Stuff */
+/* Home Component */
+.btn {
+  display: inline-block;
+  margin: 5px;
+}
+
+/* Get Started Component */
 form {
   display: flex;
   justify-content: center;
@@ -53,55 +53,61 @@ form {
   margin: 0;
 }
 
-/* Footer */
+.getStarted-container {
+  position: relative;
+  margin: 10% auto;
+  text-align: center;
+}
+
+.quote {
+  font-size: 25px;
+  margin-top: 5%;
+}
+
+/* Footer Component */
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   background: #222831;
   padding-top: 3px;
-  margin-bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .footer-list {
   list-style-type: none;
   margin-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
 }
 
 .footer-element {
-  padding: 2px;
-  display: inline-block;
-  margin: 0 10rem 6px 10rem;
+  padding: 2px 0 8px;
+  margin: 0 auto;
+  color: #ccf2f4;
+}
+
+.footer-element:hover {
+  color: grey;
 }
 
 /* Calendar component */
 .calendar-container {
   display: flex;
-  width: 50%;
   justify-content: space-evenly;
   align-items: baseline;
-  margin: 5% auto;
+  margin: 0 auto;
 }
-
-.calendar-icon {
-  color: white;
-}
-
 
 /* Item component */
 .habit-element {
   font-size: 25px;
   font-family: "Source Sans Pro", sans-serif;
   color: black;
-  display: inline-block;
-  margin: auto;
-  width: 50%;
-  margin-bottom: 1px;
+  width: 30%;
+  margin: 5px auto;
 }
-
 
 /* HabitContainer Component */
 .list-group {
@@ -109,15 +115,65 @@ form {
   margin-top: 10px;
 }
 
-/* GetStarted Component */
-.getStarted-container {
-  position: relative;
-  margin: 5% auto 0 auto;
-  text-align: center;
-  padding: 20px 20% 3%;
+
+@media screen and (max-width: 1024px) {
+  /* Home Component */
+  .container {
+    margin: 30% auto;
+  }
+
+  .title {
+    font-size: 100px;
+  }
+
+  .quote {
+    font-size: 35px;
+  }
+
+  /* Get Started Component */
+  .getStarted-container {
+    margin: 20% auto;
+  }
+
+  .calendar-string {
+    font-size: 70px;
+  }
+
+  .habit-element {
+    width: 70%;
+    font-size: 30px;
+  }
 }
 
-.quote {
-  font-size: 25px;
-  margin-top: 5%;
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  /* Home Container */
+  .title {
+    font-size: 50px;
+  }
+
+  .container {
+    margin: 8rem auto;
+  }
+
+  .quote {
+    font-size: 20px;
+  }
+
+  /* getStarted Container */
+  .getStarted-container {
+    margin: 50% auto;
+  }
+
+  .calendar-string {
+    font-size: 45px;
+  }
+
+  .habit-element {
+    font-size: 20px;
+    width: 80%;
+  }
 }
