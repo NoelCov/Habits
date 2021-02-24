@@ -115,6 +115,35 @@ form {
   margin-top: 10px;
 }
 
+/* Authenticate Container */
+.authenticate-container {
+  margin: 15% auto;
+}
+
+.btn {
+  margin: 0;
+  width: 140%;
+}
+
+.form-control {
+  background-color: #ccf2f4;
+}
+
+.form-control:focus {
+  background-color: #ccf2f4;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: white;
+}
+
+.row {
+  width: 100%;
+}
 
 @media screen and (max-width: 1024px) {
   /* Home Component */

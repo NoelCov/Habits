@@ -4,7 +4,6 @@ import Button from '@material-ui/core/Button';
 import HabitsContainer from "./HabitsContainer";
 import DoneIcon from '@material-ui/icons/Done';
 import CalendarComponent from "./CalendarComponent";
-import Footer from "./Footer";
 const axios = require("axios");
 
 function GetStarted(){
@@ -35,7 +34,6 @@ function GetStarted(){
   }
 
   return (
-    <div>
       <div className="getStarted-container">
         <CalendarComponent />
         <form>
@@ -47,9 +45,7 @@ function GetStarted(){
           </div>
         </form>
         <HabitsContainer />
-      </div>
-      <Footer />
-    </div>)
+      </div>)
     }
 
 export default GetStarted;

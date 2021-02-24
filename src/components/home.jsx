@@ -8,7 +8,7 @@ function homePage() {
   <div className="container">
   <h1 className="title">Habit Tracker</h1>
     <div className="btn">
-      <Link style={{ textDecoration: 'none' }} to="/getStarted">
+      <Link style={{ textDecoration: 'none' }} to="/Login">
         <Button variant="contained">Get Started</Button>
       </Link>
     </div>
