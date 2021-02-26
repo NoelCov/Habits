@@ -5,7 +5,7 @@ import CalendarComponent from "./CalendarComponent";
 import { useAuth } from "../Contexts/AuthContext";
 const axios = require("axios");
 
-function GetStarted(){
+export default function GetStarted(){
   const [habit, setHabit] = useState("");
   const { currentUser } = useAuth();
 
@@ -46,5 +46,3 @@ function GetStarted(){
         <HabitsContainer />
       </div>)
     }
-
-export default GetStarted;

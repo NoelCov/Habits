@@ -1,9 +1,10 @@
 import React from "react";
 import Home from "./home";
 import Header from "./Header";
-import CreateAccount from "./CreateAccount";
-import Authenticate from "./Authenticate";
-import GetStarted from "./getStarted";
+import Register from "./Register";
+import LogIn from "./LogIn";
+import PrivateRoute from "./PrivateRoute";
+import getStarted from "./getStarted";
 import Footer from "./Footer";
 import { AuthProvider } from "../Contexts/AuthContext"; 
 import {
@@ -13,21 +14,19 @@ import {
 } from "react-router-dom";
 
 
-function App(){
+export default function Routes(){
   return (
     <AuthProvider>
     <Router>
     <Header />
       <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Register" component={CreateAccount} />
-          <Route path="/Login" component={Authenticate} />
-          <Route exact path="/getstarted" component={GetStarted} />
+          <Route path="/Register" component={Register} />
+          <Route path="/Login" component={LogIn} />
+          <PrivateRoute path="/getStarted" component={getStarted} />
       </Switch>
       <Footer />
     </Router>
     </AuthProvider>
   )
 };
-
-export default App;

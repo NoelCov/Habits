@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
-import DeleteIcon from '@material-ui/icons/Delete';
 
-function Item(props){
+export default function Item(props){
 
   function handleonClick(event) {
     let name = event.target.innerHTML;
@@ -23,5 +22,4 @@ function Item(props){
       >{props.element}</a>
   )}
 
-export default Item;
 

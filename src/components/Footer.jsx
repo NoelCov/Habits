@@ -3,7 +3,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
-function Footer(){
+export default function Footer(){
   return (
     <div className="footer">
       <ul className="footer-list">
@@ -14,5 +14,3 @@ function Footer(){
     </div>
   )
 }
-
-export default Footer;

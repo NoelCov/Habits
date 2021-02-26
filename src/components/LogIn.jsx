@@ -27,8 +27,6 @@ export default function Authenticate() {
     setLoading(false);
   }
 
-  console.log(emailRef.current.value, passwordRef.current.value)
-
   return (
     <div className="authenticate-container">
     <h1 className="title">Sign In</h1>
@@ -45,7 +43,6 @@ export default function Authenticate() {
         </div>
       </form>
       <p style={{fontSize: "20px", margin: "10px 0"}}>Not registered? <Link to="/Register" className="link">Create account</Link></p>
-      
     </div>
   )
 }

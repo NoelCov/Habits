@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 import { useAuth } from "../Contexts/AuthContext";
 
-function HomePage() {
+export default function HomePage() {
   const { currentUser } = useAuth();
   const history = useHistory();
 
@@ -26,5 +26,3 @@ function HomePage() {
   <Footer />
 </div>)
 };
-
-export default HomePage;

@@ -3,7 +3,7 @@ import Item from "./Item";
 import { useAuth } from "../Contexts/AuthContext";
 const axios = require("axios");
 
-function HabitsContainer(){
+export default function HabitsContainer(){
   const [habitList, setList] = useState([]);
   const [controller, setController] = useState(false);
   const { currentUser } = useAuth();
@@ -31,5 +31,3 @@ function HabitsContainer(){
     </div>  
   )
 };
-  
-export default HabitsContainer;

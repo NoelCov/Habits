@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CalendarComponent() {
+export default function CalendarComponent() {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
     const [myTime] = useState(new Date());
@@ -16,4 +16,3 @@ function CalendarComponent() {
     </div>)
 }
 
-export default CalendarComponent;
