@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./home";
+import Header from "./Header";
 import CreateAccount from "./CreateAccount";
 import Authenticate from "./Authenticate";
 import GetStarted from "./getStarted";
@@ -16,11 +17,12 @@ function App(){
   return (
     <AuthProvider>
     <Router>
+    <Header />
       <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/Register" component={CreateAccount} />
           <Route path="/Login" component={Authenticate} />
-          <Route exact path="/GetStarted" component={GetStarted} />
+          <Route exact path="/getstarted" component={GetStarted} />
       </Switch>
       <Footer />
     </Router>

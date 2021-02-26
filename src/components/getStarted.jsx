@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import HabitsContainer from "./HabitsContainer";
-import DoneIcon from '@material-ui/icons/Done';
 import CalendarComponent from "./CalendarComponent";
+import { useAuth } from "../Contexts/AuthContext";
 const axios = require("axios");
 
 function GetStarted(){
   const [habit, setHabit] = useState("");
-  const options = {year: 'numeric', month: 'long', day: 'numeric' };
-  const [date] = useState(new Date().toLocaleDateString(undefined, options));
+  const { currentUser } = useAuth();
 
   function handleChange(event){
     setHabit(event.target.value);
     event.preventDefault();
   }
 
-  function handleClick(event){
+  function handleClick(e){
     axios.post("/habits", {
       habit: habit,
-      date: [date]
+      email: currentUser.email
     })
     .then(function (response) {
       console.log(response);
@@ -28,21 +26,22 @@ function GetStarted(){
       console.log(error);
     })
     setHabit("");
-    event.preventDefault();
+    e.preventDefault();
 
     window.location.reload()
   }
 
   return (
       <div className="getStarted-container">
+        <h1 className="title">Welcome!</h1>
         <CalendarComponent />
-        <form>
-          <div className="form-btn" onChange={handleChange}>
-            <TextField required id="outlined-basic" size="small" label="ENTER YOUR HABIT" value={habit} variant="outlined" autoComplete="off"/>
-          </div>
-          <div className="form-btn-submit" >
-            <Button onClick={handleClick} variant="outlined" size="large"><DoneIcon /></Button>
-          </div>
+        <form className="row g-3">
+        <div className="col-auto">
+          <TextField onChange={handleChange} required id="outlined-basic" size="small" label="Enter your habit" value={habit} autoComplete="off"/>
+        </div>
+        <div className="col-auto">
+          <button onClick={handleClick} type="submit" className="btn getStarted-btn btn-outline-dark">Add</button>
+        </div>
         </form>
         <HabitsContainer />
       </div>)

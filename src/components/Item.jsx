@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function Item(props){
 
   function handleonClick(event) {
     let name = event.target.innerHTML;
 
-    axios.delete('habits/' + name)
+    axios.delete('habits/habit/' + name)
     .then((res) => {
       console.log(res)
     })
@@ -16,10 +17,11 @@ function Item(props){
     window.location.reload()
   }
 
-  return <a href="#" className = "habit-element list-group-item list-group-item-action list-group-item-dark"
-  onClick={handleonClick}
-  >{props.element}</a>
-}
+  return (
+      <a href="#" className="habit-element list-group-item list-group-item-action list-group-item-dark"
+      onClick={handleonClick}
+      >{props.element}</a>
+  )}
 
 export default Item;
 

@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../Contexts/AuthContext";
 
-
 export default function CreateAccount() {
-  const emailRef = useRef('')
-  const passwordRef = useRef('')
-  const passwordConfirmRef = useRef('')
-  const { signup } = useAuth()
-  const [error, setError] = useState("")
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
+  const passwordConfirmRef = useRef('');
+  const { signup } = useAuth();
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -22,20 +22,17 @@ export default function CreateAccount() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value);
+      history.push("/getStarted")
     } catch(error) {
-      console.log(error.code)
-      console.log(error.message)
       setError("Failed to create an account")
     }
 
     setLoading(false);
   }
 
-  console.log(emailRef.current.value);
-
   return (
     <div className="authenticate-container">
-    <h1 className="title">Please register</h1>
+    <h1 className="title">Sign Up</h1>
     {error && <h1 style={{backgroundColor: "yellow", width: "50%", margin: "20px auto"}}>{error}</h1>}
       <form className="row g-3" onSubmit={handleSubmit}> 
         <div className="col-auto">
