@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   background: #50a3a2;
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
@@ -34,22 +36,18 @@ h2 {
 
 /* Header Component */
 .navbar {
+  background-color: rgb(27, 25, 25, 0.9);
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-link {
-  padding: 2px 0 8px;
-  margin: 0 auto;
-  color: #ccf2f4;
+  color: white;
 }
 
 .nav-link:hover {
   color: grey;
-}
-
-.home-icon {
-  position: relative;
-  margin-left: 3%;
 }
 
 .logInOut {
@@ -90,7 +88,6 @@ form {
   bottom: 0;
   left: 0;
   background: #222831;
-  padding-top: 3px;
   width: 100%;
 }
 
@@ -99,13 +96,11 @@ form {
   margin-bottom: 0;
   display: flex;
   justify-content: space-evenly;
-  padding: 0;
 }
 
 .footer-element {
-  padding: 2px 0 8px;
-  margin: 0 auto;
-  color: #ccf2f4;
+  padding: .5rem;
+  color: white;
 }
 
 .footer-element:hover {

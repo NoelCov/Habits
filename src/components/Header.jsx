@@ -13,11 +13,9 @@ export default function Header() {
   }
 
   return (
-      <nav className="navbar navbar-dark bg-dark">
-        <div className="container-fluid">
-            <a className="nav-link active home-icon" href="/"><HomeIcon /></a>
-            <a className="nav-link logInOut" onClick={handleClick} >{ currentUser && "Log out - " + currentUser.email}</a>
-        </div>
+      <nav className="navbar">
+            <a className="nav-link" href="/"><HomeIcon /></a>
+            <a className="nav-link" onClick={handleClick} >{ currentUser && "Log out - " + currentUser.email}</a>
       </nav>
   )
 }
